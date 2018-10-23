@@ -1,0 +1,14 @@
+{
+  "name": "pri2018tp5",
+  "version": "1.0.0",
+  "description": "tp de pri, gestao de informacao musical",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Antonio Chaves A75870",
+  "license": "ISC",
+  "dependencies": {
+    "pug": "^2.0.3"
+  }
+}

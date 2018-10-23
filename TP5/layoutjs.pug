@@ -1,0 +1,48 @@
+extends layout
+
+block corpo
+	.w3.container
+		.w3-card-2
+			header.w3-container.w3-khaki
+				h2= ds.titulo+'/'+ds.pasta
+				if ds.subtitulo
+					h3= ds.subtitulo
+			.w3-container.w3-pale-green
+				h3 Informações sobre a faixa
+				.w3-container.w3-pale-blue
+					table.w3-table.w3-bordered
+						tr
+							td Tipo
+							td= ds.tipo
+						if ds.compositor 
+							tr
+								td Compositor
+								td= ds.compositor
+						if ds.arranjo 
+							tr
+								td Arranjo
+								td= ds.arranjo
+				if ds.instrumentos
+					h3 Instrumentos
+					table.w3-table.w3-bordered
+						tr
+							th Nome
+							th Partitura
+							th Afinacao
+							th Voz
+							th Clave
+						each i in ds.instrumentos
+							tr
+								td= i.nome
+								td= i.partitura.path
+								if i.partitura.afinacao
+									td= i.partitura.afinacao
+								if i.partitura.voz
+									td= i.partitura.voz
+								if i.partitura.clave
+									td= i.partitura.clave
+			footer.w3-container.w3-khaki
+				p
+					a(href='http://localhost:5001/index')
+						| Voltar a index
+				address PRI2018: A75870 - António Chaves	

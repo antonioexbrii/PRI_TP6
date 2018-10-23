@@ -1,0 +1,22 @@
+extends layout
+
+block corpo
+	.w3.container
+		.w3-card-2
+			header.w3-container.w3-khaki
+				h2 Arquivo de Música Digital
+			.w3-container.w3-pale-green
+				table.w3-table.w3-bordered
+					tr
+						th Tipo
+						th Lista de Musicas	
+					each f in ds
+						tr
+							td= f.tipo
+							td
+								ul
+									each t in f.info
+										li
+											a(href="http://localhost:5001/musicas/"+t.aid)= t.titulo
+			footer.w3-container.w3-khaki
+				address PRI2018: A75870 - António Chaves
