@@ -1,15 +1,16 @@
 {
-  "name": "aula5",
+  "name": "tp6",
   "version": "1.0.0",
-  "description": "Server o dataset dos arqueossitios",
-  "main": "server.js",
+  "description": "6o tp de PRI2018",
+  "main": "server1.js",
   "scripts": {
-    "test": "node server.js"
+    "test": "node server1.js",
+    "dev":"nodemon server1.js"
   },
-  "author": "Antonio Chaves",
+  "author": "A75870",
   "license": "ISC",
   "dependencies": {
-    "pug": "^2.0.3",
-    "xml2json": "^0.11.2"
+    "nodemon": "^1.18.4",
+    "pug": "^2.0.3"
   }
 }

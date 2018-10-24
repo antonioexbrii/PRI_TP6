@@ -1,22 +1,23 @@
 extends layout
-
-block corpo
+block content
 	.w3-container
 		.w3-card-4
-			header.w3-container.w3-light-grey
-				h3 Arqueossitios do NW Portugues
-			.w3-container
-				table.w3-table.w3-bordered
-					tr
-						th Concelho
-						th Lista de ArqsSitios
-					each c in ind.arqsits.concelho
-						tr
-							td= c.designacao
-							td
-								ul
-									each a in c.arqsits.arqelem
-										li
-											a(href="http://localhost:5000/arqelem/" + a.id)= a.designacao
-			footer.w3-container.w3-light-grey
-				address gerado por ArqSitsAPP by jcr
+			header.w3-container.w3-light-blue
+				h2 Registo de Teses - PRI 2018/19
+			.w3-ul.w3-card-4.w3-center.w3-hoverable
+				li
+					a(href="http://localhost:5006/registo") Registo de tese
+				li
+					a(href="http://localhost:5006/lista") Lista de Teses registadas
+				li
+					a(href="http://localhost:5006/manifesto") Manifesto do TP6
+				li
+					a(href="https://github.com/antonioexbrii/PRI_TP6") Repositorio Git
+				li
+					a(href="http://localhost:5006/limpaBD") Apagar base de dados
+			if conf
+				.w3-panel.w3-blue.w3-display-container
+					h3 Listagem apagada
+					p A listagem de dados foi apagada com sucesso.
+			footer.w3-container.w3-light-blue
+				address PRI2018 - António Chaves A75870 

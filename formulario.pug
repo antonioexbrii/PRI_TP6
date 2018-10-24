@@ -1,0 +1,45 @@
+extends layout
+block content
+	.w3-container.w3-card-4
+		header.w3-container.w3-light-blue
+			h2 Formulário de registo de Tese
+		.w3-container.w3-light-grey
+			form.w3-container(action='/processaForm',method='POST')
+					h3 -	Aluno:
+					br
+					label Nome
+					input.w3-input.w3-border(type='text' name='nome')
+					label No. Mecanográfico:
+					input.w3-input.w3-border(type='text' name='mecan')
+					br
+					label Curso&emsp;&emsp;&emsp;
+					select(name='curso')
+						option(value='MIEI') MIEI					
+						option(value='MIEGSI') MIEGSI
+						option(value='LAP') LAP
+						option(value='LA') LA
+						option(value='LCO') LCO
+						option(value='LCC') LCC
+						option(value='LEB') LEB
+					br
+					br
+					label Instituição&emsp;
+					select(name='curso')
+						option(value='U. Minho') Universidade do Minho					
+						option(value='U. Porto') Universidade do Porto
+						option(value='U. Aveiro') Universidade de Aveiro
+					hr
+					h3 -	Tese:
+					br
+					label Título
+					input.w3-input.w3-border(type='text' name='titulo')
+					label Data
+					input.w3-input.w3-border(type='date' name='data')
+					label Grau de Ensino
+					select(name='tipo')
+						option(value='Mestrado') Mestrado					
+						option(value='Doutoramento') Doutoramento
+
+					input.w3-btn.w3-border(type='submit',value='Registar')
+		footer.w3-container.w3-light-blue
+			address PRI2018 - António Chaves A75870
