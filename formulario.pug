@@ -36,10 +36,14 @@ block content
 					label Data
 					input.w3-input.w3-border(type='date' name='data')
 					label Grau de Ensino
-					select(name='tipo')
-						option(value='Mestrado') Mestrado					
-						option(value='Doutoramento') Doutoramento
-
+					br
+					ul.w3-ul.w3-light-grey
+						li
+							label Mestrado&emsp;&emsp;&emsp;&emsp;&emsp;
+							input.w3-btn(type='radio' name='tipo' value='Mestrado')
+						li
+							label Doutoramento   &emsp;&emsp;
+							input.w3-btn(type='radio' name='tipo' value='Doutoramento')
 					input.w3-btn.w3-border(type='submit',value='Registar')
 		footer.w3-container.w3-light-blue
 			address PRI2018 - António Chaves A75870
